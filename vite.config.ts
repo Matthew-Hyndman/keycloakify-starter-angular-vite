@@ -16,6 +16,8 @@ export default defineConfig(({ mode }) => ({
     angular(),
     keycloakify({
       accountThemeImplementation: 'none',
+      themeName: 'swift-booking-theme',
+      keycloakifyBuildDirPath: '../../dist/keycloak-theme',
     }),
   ],
 }));
