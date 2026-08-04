@@ -7,7 +7,7 @@
 
 <#import "template.ftl" as layout>
 <@layout.emailLayout>
-<div class="content-container">
+<div style="border: 1px solid rgba(255, 255, 255, 0.62); background: linear-gradient(140deg, rgba(243, 243, 243, 0.48), rgba(243, 243, 243, 0.2)); backdrop-filter: blur(16px); box-shadow: 0 10px 30px rgba(56, 69, 92, 0.14); border-radius: 1rem;">
 ${kcSanitize(msg("eventLoginErrorBodyHtml",event.date,event.ipAddress))?no_esc}
 </div>
 </@layout.emailLayout>

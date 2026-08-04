@@ -7,99 +7,35 @@
 
 <#macro emailLayout>
 <html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <style>
-        :root {
-        --base-light: #f3f3f3;
-        --neutral: #898989;
-        --aqua: #a7fdff;
-        --violet: #a34aff;
-        --lilac: #d291ff;
-        --ink-strong: #1e2330;
-        --ink-muted: #4f5666;
-        --danger: #c23a53;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: 'Manrope', 'Segoe UI', sans-serif;
-        color: var(--ink-strong);
-        background:
-          radial-gradient(circle at 9% 14%, rgba(167, 253, 255, 0.56), transparent 36%),
-          radial-gradient(circle at 89% 5%, rgba(210, 145, 255, 0.52), transparent 35%),
-          radial-gradient(circle at 72% 84%, rgba(163, 74, 255, 0.22), transparent 32%),
-          linear-gradient(125deg, #fafafa 0%, #f3f3f3 45%, #ece8fb 100%);
-        background-attachment: fixed;
-      }
-
-      .card-pf  {
-          border: 0;
-          border-radius: 10px;
-      }
-
-      .content-container {
-          border: 1px solid rgba(255, 255, 255, 0.62);
-          background: linear-gradient(140deg, rgba(243, 243, 243, 0.48), rgba(243, 243, 243, 0.2));
-          -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
-          box-shadow: 0 10px 30px rgba(56, 69, 92, 0.14);
-          border-radius: 1rem;
-      }
-
-      button, a, .pf-c-button.pf-m-primary {
-          border: 0;
-          border-radius: 999px;
-          padding: 0.55rem 0.92rem;
-          font: inherit;
-          font-weight: 700;
-          cursor: pointer;
-          color: #fff;
-          background: linear-gradient(145deg, var(--violet), var(--lilac));
-          box-shadow: 0 8px 20px rgba(163, 74, 255, 0.28);
-          text-decoration: none;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          transition: transform 0.15s ease, box-shadow 0.15s ease;
-      }
-
-      a {
-          color: var(--ink-strong);
-          background: rgba(243, 243, 243, 0.48);
-          box-shadow: inset 0 0 0 1px rgba(137, 137, 137, 0.32);
-      }
-
-      p, label {
-          margin: 0;
-          color: var(--ink-muted);
-          display: block;
-          margin-block-start: 1em;
-          margin-block-end: 1em;
-          margin-inline-start: 0px;
-          margin-inline-end: 0px;
-          unicode-bidi: isolate;
-      }
-
-      img {
-        width: 50%;
-        height: auto;
-        display: flex;
-        align-self: center;
-        flex: 1;
-      }
-    </style>
-</head>
-<body>
-    <img
-      alt="swift-booking-logo"
-      src="{url.resourcesUrl}/swift_book_logo_And_Title_Transparent.png"
-      >
-    <#nested>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #1e2330; background-color: #97f8ffa4;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; border-collapse: collapse; background-color: #eef4ff;">
+    <tr>
+      <td align="center" style="padding: 24px 12px;">
+        <table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 640px; border-collapse: separate; background-color: #ffffff; border: 1px solid #dbe7ff; border-radius: 18px;">
+          <tr>
+            <td align="center" style="padding: 26px 24px 14px 24px; background-color: #f6f9ff; border-bottom: 1px solid #e6eeff;">
+              <img
+                alt="Swift Booking"
+                src="https://swift-booking-public.s3.eu-west-2.amazonaws.com/kc-logo.png"
+                width="240px"
+                style="display: block; margin: 0 auto; width: 240px; max-width: 80%; height: auto;"
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 24px 10px 24px;">
+              <#nested>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 0 24px 24px 24px; color: #6b7280; font-size: 12px; line-height: 1.5;">
+              Swift Booking account notifications are sent automatically. If you were not expecting this email, you can ignore it.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
 </#macro>
